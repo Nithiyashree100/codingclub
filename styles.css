@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000; /* Text color */
+    background: url('pic.jpg') no-repeat center center fixed; /* Replace with your image URL */
+    background-size: cover; /* Cover the entire viewport */
+    position: relative; /* Position relative for additional animations */
+    overflow: hidden; /* Prevent overflow from animated elements */
+    animation: backgroundAnimation 30s ease infinite; /* Background image animation */
+}
+
+/* Keyframes for the background image animation */
+@keyframes backgroundAnimation {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    50% {
+        transform: scale(1.05) translate(-5px, -5px); /* Scale and slightly move */
+    }
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Forms side by side */
+    align-items: flex-start;
+    width: 800px; /* Adjusted width */
+    gap: 50px; /* Increased gap between forms */
+}
+
+.form-wrapper {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque white background */
+    padding: 20px; /* Reduced padding to minimize space */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 10px; /* Reduced top margin */
+    margin-bottom: 10px; /* Reduced bottom margin */
+    animation: scaleAnimation 10s ease infinite; /* Add scale animation to forms */
+}
+
+h2 {
+    margin-bottom: 15px; /* Reduced space below the headings */
+    font-size: 24px;
+    color: #000; /* Heading color */
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000; /* Label color */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px; /* Reduced padding inside inputs */
+    margin-bottom: 12px; /* Reduced space between inputs */
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff416c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff4b2b;
+}
+
+#signup-msg,
+#login-msg {
+    margin-top: 5px; /* Reduced space above the messages */
+    font-size: 14px;
+    color: #000; /* Message color */
+}

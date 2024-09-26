@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sign Up Form -->
+        <div class="form-wrapper" id="signupFormWrapper">
+            <h2>Sign Up</h2>
+            <form id="signupForm" onsubmit="return signupFormHandler()">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+
+                <input type="submit" value="Sign Up">
+            </form>
+            <p id="signup-msg"></p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-wrapper" id="loginFormWrapper">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="return loginFormHandler()">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email" required>
+
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required>
+
+                <input type="submit" value="Login">
+            </form>
+            <p id="login-msg"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
